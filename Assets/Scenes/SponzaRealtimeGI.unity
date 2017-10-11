@@ -55,7 +55,7 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 9
-    m_Resolution: 0.1
+    m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 4096
     m_TextureHeight: 1024
@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424271369}
   - component: {fileID: 1424271368}
+  - component: {fileID: 1424271370}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -284,13 +285,28 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1424271367}
-  m_LocalRotation: {x: 0.62034994, y: -0.18233591, z: 0.36006773, w: 0.67251086}
+  m_LocalRotation: {x: 0.44882601, y: -0.4112732, z: 0.5359818, w: 0.58492154}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 74.948006, y: 50.884003, z: 96.40401}
+  m_LocalEulerAnglesHint: {x: 75, y: 0, z: 85}
+--- !u!114 &1424271370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424271367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a0e9bd2b1ad534b9c6e78e299db898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FromEuler: {x: 75, y: 0, z: 85}
+  m_ToEuler: {x: 75, y: -170, z: -85}
+  m_Speed: 0.1
+  m_EnableLoop: 1
 --- !u!1001 &1723506679
 Prefab:
   m_ObjectHideFlags: 0
