@@ -193,8 +193,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 251656221}
-  m_LocalRotation: {x: 0.09440587, y: -0.66250706, z: -0.08472125, w: -0.7382373}
-  m_LocalPosition: {x: -12.303249, y: 0.7406645, z: -0.9667983}
+  m_LocalRotation: {x: 0.08740826, y: -0.7397875, z: -0.09798992, w: -0.6599032}
+  m_LocalPosition: {x: -12.679989, y: 0.5539, z: 1.403274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -285,7 +285,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1424271367}
-  m_LocalRotation: {x: 0.5777904, y: -0.55466205, z: 0.39396882, w: 0.45088446}
+  m_LocalRotation: {x: 0.57779044, y: -0.5546621, z: 0.39396885, w: 0.4508845}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -305,8 +305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FromEuler: {x: 75, y: 0, z: 85}
   m_ToEuler: {x: 75, y: -170, z: -85}
-  m_Speed: 0.1
+  m_RotationSpeed: 0.05
   m_EnableLoop: 1
+  m_LightIntensitySpeed: 0.5
 --- !u!1001 &1723506679
 Prefab:
   m_ObjectHideFlags: 0
