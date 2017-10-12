@@ -12,7 +12,8 @@ Simple example for using Crytek Sponza in Unity.
 
 ## Dynamic Global Illumination by Enlighten ( Scenes/SponzaRealtimeGI.unity )
 <img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/realtime_gi.png" width="640"/>
-* When the directional light is moving, the ambient lighting also changes as the gif animation below.
+
+When the directional light is moving, the ambient lighting also changes as the gif animation below.
 <img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/realtime_gi.gif" width="640"/>
 
 ## Recommended system requirements
