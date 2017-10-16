@@ -9,9 +9,11 @@ Simple example for using Crytek Sponza in Unity.
 ## Baked Global Illumination by Enlighten ( Scenes/SponzaBaked.unity )
 <img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/Screenshot_0.png" width="640"/>
 <img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/Screenshot_2.png" width="640"/>
+<img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/baked_gi_vis.png" width="640"/>
 
 ## Dynamic Global Illumination by Enlighten ( Scenes/SponzaRealtimeGI.unity )
-<img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/realtime_gi.png" width="640"/>
+<img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/realtime_gi_edit.png" width="640"/>
+<img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/realtime_gi_vis.png" width="640"/>
 
 When the directional light is moving, the ambient lighting also changes as the gif animation below.
 <img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/realtime_gi.gif" width="640"/>
