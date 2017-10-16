@@ -19,4 +19,4 @@ When the directional light is moving, the ambient lighting also changes as the g
 <img src="https://github.com/haneda-atsushi/UnityCrytekSponza/blob/master/Screenshots/realtime_gi.gif" width="640"/>
 
 ## Recommended system requirements
-* Unity 2017.1.0f3
+* Unity 2017.2.0f3
