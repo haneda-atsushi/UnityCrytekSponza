@@ -5,17 +5,20 @@ using UnityEngine.Assertions;
 
 public class DirectionalLightController : MonoBehaviour
 {
-    public Vector3 m_FromEuler     = Vector3.zero;
-    public Vector3 m_ToEuler       = Vector3.zero;
-    public float   m_RotationSpeed = 0.1f;
+    public Vector3        m_FromEuler     = Vector3.zero;
+    public Vector3        m_ToEuler       = Vector3.zero;
+    public float          m_RotationSpeed = 0.1f;
+    float                 m_RotationTime  = 0.0f;
+    Quaternion            m_QuatFrom;
+    Quaternion            m_QuatTo;
 
-    float          m_Time          = 0.0f;
-    Quaternion     m_QuatFrom;
-    Quaternion     m_QuatTo;
+    Light                 m_Light;
+    float                 m_LightIntensity;
+    public AnimationCurve m_LightIntensityCurve  = AnimationCurve.Linear( 0.0f, 1.0f, 1.0f, 1.0f );
+    [Range(0.0f,120.0f)]
+    public float          m_LightIntensityPeriod = 10.0f;
 
-    public float   m_LightIntensitySpeed = 0.5f;
-    Light          m_Light;
-    float          m_LightIntensity;
+    float                 m_LightIntensityTime   = 0.0f;
 
     void Start()
     {
@@ -30,11 +33,9 @@ public class DirectionalLightController : MonoBehaviour
 
     void Update()
     {
-        m_Time += Time.deltaTime;
         this.transform.rotation = 
             Quaternion.Lerp( m_QuatFrom, m_QuatTo,
-                             m_Time * m_RotationSpeed );
-
+                             m_RotationTime * m_RotationSpeed );
         float angle = Quaternion.Angle( this.transform.rotation, m_QuatTo );
         if ( angle == 0.0f )
         {
@@ -42,15 +43,21 @@ public class DirectionalLightController : MonoBehaviour
             m_QuatFrom     = m_QuatTo;
             m_QuatTo       = tmp;
 
-            m_Time         = 0.0f;
+            m_RotationTime = 0.0f;
+        }
+        else
+        {
+            m_RotationTime += Time.deltaTime;
         }
 
-        float deg = 180.0f * Time.realtimeSinceStartup * m_LightIntensitySpeed;
-        float rad = Mathf.Deg2Rad * deg;
-        float cos = Mathf.Cos( rad );
+        float light_intensity_time  = ( m_LightIntensityTime / m_LightIntensityPeriod );
+        m_LightIntensityTime       += Time.deltaTime;
+        if ( m_LightIntensityTime > m_LightIntensityPeriod )
+        {
+            m_LightIntensityTime = 0.0f;
+        }
 
-        float light_offset    = 0.5f;
-        float light_intensity = ( m_LightIntensity - light_offset ) * ( 0.5f * cos + 0.5f ) + light_offset;
+        float light_intensity = m_LightIntensity * m_LightIntensityCurve.Evaluate( light_intensity_time );
         m_Light.intensity     = light_intensity;
     }
 }

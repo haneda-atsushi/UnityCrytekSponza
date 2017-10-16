@@ -227,7 +227,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!108 &1424271368
 Light:
@@ -285,13 +285,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1424271367}
-  m_LocalRotation: {x: 0.57779044, y: -0.5546621, z: 0.39396885, w: 0.4508845}
+  m_LocalRotation: {x: 0.44875914, y: -0.47525126, z: 0.5271051, w: 0.5430578}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 73.350006, y: -170.981, z: -85.618004}
+  m_LocalEulerAnglesHint: {x: 81.272, y: -16.497002, z: 74.109}
 --- !u!114 &1424271370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,9 +305,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FromEuler: {x: 75, y: 0, z: 85}
   m_ToEuler: {x: 75, y: -170, z: -85}
-  m_RotationSpeed: 0.05
-  m_EnableLoop: 1
-  m_LightIntensitySpeed: 0.5
+  m_RotationSpeed: 0.1
+  m_LightIntensityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.2
+      value: 1
+      inSlope: Infinity
+      outSlope: 0
+      tangentMode: 7
+    - serializedVersion: 2
+      time: 0.4
+      value: 0.25
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6
+      value: 0.25
+      inSlope: 0.0076584946
+      outSlope: 0.0076584946
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.8
+      value: 1
+      inSlope: 0.027685633
+      outSlope: Infinity
+      tangentMode: 97
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  m_LightIntensityPeriod: 6
 --- !u!1001 &1723506679
 Prefab:
   m_ObjectHideFlags: 0
