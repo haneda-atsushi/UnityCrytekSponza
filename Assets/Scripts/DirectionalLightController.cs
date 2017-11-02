@@ -5,6 +5,7 @@ using UnityEngine.Assertions;
 
 public class DirectionalLightController : MonoBehaviour
 {
+    public bool           m_EnableRotation = true;
     public Vector3        m_FromEuler     = Vector3.zero;
     public Vector3        m_ToEuler       = Vector3.zero;
     public float          m_RotationSpeed = 0.1f;
@@ -33,21 +34,24 @@ public class DirectionalLightController : MonoBehaviour
 
     void Update()
     {
-        this.transform.rotation = 
-            Quaternion.Lerp( m_QuatFrom, m_QuatTo,
-                             m_RotationTime * m_RotationSpeed );
-        float angle = Quaternion.Angle( this.transform.rotation, m_QuatTo );
-        if ( angle == 0.0f )
+        if ( m_EnableRotation )
         {
-            Quaternion tmp = m_QuatFrom;
-            m_QuatFrom     = m_QuatTo;
-            m_QuatTo       = tmp;
+            this.transform.rotation = 
+                Quaternion.Lerp( m_QuatFrom, m_QuatTo,
+                                 m_RotationTime * m_RotationSpeed );
+            float angle = Quaternion.Angle( this.transform.rotation, m_QuatTo );
+            if ( angle == 0.0f )
+            {
+                Quaternion tmp = m_QuatFrom;
+                m_QuatFrom     = m_QuatTo;
+                m_QuatTo       = tmp;
 
-            m_RotationTime = 0.0f;
-        }
-        else
-        {
-            m_RotationTime += Time.deltaTime;
+                m_RotationTime = 0.0f;
+            }
+            else
+            {
+                m_RotationTime += Time.deltaTime;
+            }
         }
 
         float light_intensity_time  = ( m_LightIntensityTime / m_LightIntensityPeriod );

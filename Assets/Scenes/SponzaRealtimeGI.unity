@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a0e9bd2b1ad534b9c6e78e299db898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_EnableRotation: 1
   m_FromEuler: {x: 75, y: 0, z: 85}
   m_ToEuler: {x: 75, y: -170, z: -85}
   m_RotationSpeed: 0.1
@@ -305,29 +306,11 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.2
-      value: 1
-      inSlope: Infinity
-      outSlope: 0
-      tangentMode: 7
-    - serializedVersion: 2
-      time: 0.4
-      value: 0.25
+      time: 0.4976213
+      value: 0.012266606
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
-      time: 0.6
-      value: 0.25
-      inSlope: 0.0076584946
-      outSlope: 0.0076584946
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.8
-      value: 1
-      inSlope: 0.027685633
-      outSlope: Infinity
-      tangentMode: 97
     - serializedVersion: 2
       time: 1
       value: 1
